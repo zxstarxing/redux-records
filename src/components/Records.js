@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Record from './Record';
-import { load_records } from '../actions';
-import { connect } from 'react-redux'
 
-class Records extends Component {
-    componentDidMount() {
-        this.props.load_records();
-    }
+class Records extends PureComponent {
     render() {
         const { error, isLoaded, records } = this.props.records;
         const loadingView = (
@@ -59,11 +54,4 @@ class Records extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        records: state.records
-    }
-}
-
-
-export default connect(mapStateToProps, { load_records })(Records)
+export default Records

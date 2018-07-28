@@ -50,10 +50,5 @@ class RecordForm extends Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    return{
-        
-    }
-}
 
-export default connect(mapStateToProps, {add_record})(RecordForm);
+export default connect(null, {add_record})(RecordForm);

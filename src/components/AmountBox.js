@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-export default class AmountBox extends PureComponent {
+ class AmountBox extends PureComponent {
     render() {
         return (
             <div className="col-sm-4">
@@ -9,10 +9,12 @@ export default class AmountBox extends PureComponent {
                         {this.props.text}
                     </div>
                     <div className="card-body">
-                        78
+                        {this.props.total}
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+export default AmountBox;

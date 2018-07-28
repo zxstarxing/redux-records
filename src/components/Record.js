@@ -59,7 +59,7 @@ class Record extends Component {
         const updateView = (
             <tr>
                 <td><input className="form-control" onChange={this.handleChange.bind(this)} name="date" value={this.state.date} placeholder="Date" /></td>
-                <td><input className="form-control" onChange={this.handleChange.bind(this)} name="title" value={this.state.date} placeholder="Title" /></td>
+                <td><input className="form-control" onChange={this.handleChange.bind(this)} name="title" value={this.state.title} placeholder="Title" /></td>
                 <td><input className="form-control" onChange={this.handleChange.bind(this)} name="amount" value={this.state.amount} placeholder="Amount" /></td>
                 <td>
                     <button className="btn btn-primary mr-2" onClick={() => this.handleUpdate()}>Update</button>
