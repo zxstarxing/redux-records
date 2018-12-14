@@ -1,4 +1,3 @@
-### 2018-07-23
-将records用react-redux从写了一遍，套用N多中间件，规范化了一下，调用mockapi真实数据模拟真实交互，分层规范化
-### 2018-07-28
-新增统计
+### 2018-12-14
+react redux router4 实现一个crud 一个完整周期,里面细节不详细说明
+> 网址：https://gameszxstarxing.netlify.com/Games

@@ -1,30 +1,37 @@
-import {LOAD_RECORD,ADD_RECORD,REMOVE_RECORD,UPDATE_RECORD} from '../constants';
-import * as RecordsAPI from '../utils/RecordsAPI';
+import {ADD_GAME,LOAD_GAME,REMOVE_GAME,UPDATE_GAME, FETCH_GAME} from '../constants';
+import * as GamesAPI from '../utils/GamesAPI';
 
-export const load_records = () => {
-    return {
-        type: LOAD_RECORD,
-        payload:RecordsAPI.getAll()
-    }
-}
-
-export const add_record = (record) =>{
+export const add_game = (game) =>{
     return{
-        type:ADD_RECORD,
-        payload:RecordsAPI.push(record)
+        type:ADD_GAME,
+        payload:GamesAPI.push(game)
     }
 }
 
-export const remove_record = (id)=>{
+export const load_games = ()=>{
     return {
-        type:REMOVE_RECORD,
-        payload:RecordsAPI.remove(id)
+        type:LOAD_GAME,
+        payload:GamesAPI.getAll()
     }
 }
 
-export const update_record = (id,record)=>{
+export const remove_game=(id)=>{
     return {
-        type:UPDATE_RECORD,
-        payload:RecordsAPI.update(id,record)
+        type:REMOVE_GAME,
+        payload:GamesAPI.remove(id)
+    }
+}
+
+export const update_game=(id,game)=>{
+    return {
+        type:UPDATE_GAME,
+        payload:GamesAPI.update(id,game)
+    }
+}
+
+export const fetch_game=(id)=>{
+    return {
+        type:FETCH_GAME,
+        payload:GamesAPI.get(id)
     }
 }

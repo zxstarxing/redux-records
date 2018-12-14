@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux';
-import records from './records';
+import { combineReducers } from 'redux';
+import games from '../reducers/games';
 
 var rootReducer = combineReducers({
-    records
+    games
 })
 
 export default rootReducer;
